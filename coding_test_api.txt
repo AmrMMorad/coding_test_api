@@ -1,0 +1,20 @@
+Hi ,
+
+You have been provided with a zip containing an HTML to use as a starting point for building a small single page application. Extract the zip and open the HTML file.The HTML file sources jquery 1.7 and mockjax (a library used to mock ajax APIs). It also loads a fake API for getting information about a single type of resource - instances.
+The API is quite simple, it only has two urls and does not accept extra parameters, /instances – this returns a json object with metadata about all instances /instances/id – this returns a json object with metadata for the specific instance with the given id The fake API has been given a 750ms latency.
+
+The HTML file includes an example of how to use the API and send an AJAX request to it.
+
+Solution requirements: For this test, we require you to extend the HTML file into a single page application that does the following:
+* When the application loads, it loads data about all the instances from the API and visualizes this data in some way. (e.g: a table with all the data)
+* The application must have some mechanism for refreshing the data of only a single record (e.g. A refresh record button)
+* The application should show the user some indication that it is refreshing/loading new data
+
+Send on whatever you have after 90 mins.
+
+IMPORTANT! Put all your code into body of email, not as attachments as it may get stripped by our mail server.
+
+Please let me know if you received my mail.
+
+Best of luck,
+Davide
