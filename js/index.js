@@ -3,6 +3,12 @@ window.onload = function() {
 	get_all_resources();
 };
 
+function refreshButton(value, row, index){
+	return [
+		'<button id= ' + row.id + '>Refresh Instance</button>'
+	]
+}
+
 function get_all_resources() {
 	// var resources_data = $.ajax(
 	// 	{
