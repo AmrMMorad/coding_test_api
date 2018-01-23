@@ -5,8 +5,30 @@ window.onload = function() {
 
 function refreshButton(value, row, index){
 	return [
-		'<button id= ' + row.id + '>Refresh Instance</button>'
+		'<button class="refresh">Refresh Instance</button>'
 	]
+}
+
+window.refreshAction = {
+	'click .refresh': function (e, value, row, index) {
+		refresh_resource(row.id, index);
+	}
+};
+
+function refresh_resource(instance_id, index){
+	// var instance_data = $.ajax(
+	// 	{
+	// 		url: '/instances/' + instance_id,
+	// 	});
+	var instance_data = {
+		"id": 1000,
+		"name": "Instance 1000",
+		"status": "hold"
+	}
+    $('#resources').bootstrapTable('updateRow', {
+	    index: index,
+	    row: instance_data
+	});
 }
 
 function get_all_resources() {
@@ -199,4 +221,5 @@ function get_all_resources() {
 		//Assigning data to table
 		data: resources_data
 	});
+
 }
