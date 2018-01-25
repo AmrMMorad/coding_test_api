@@ -2,6 +2,13 @@ window.onload = function() {
 	get_all_resources();
 };
 
+window.refreshAction = {
+	'click .refresh': function (e, value, row, index) {
+		disable_button(row.id);
+		refresh_instance(row.id, index);
+	}
+};
+
 function get_all_resources() {
 	$.ajax({
 		url: '/instances',
@@ -17,31 +24,7 @@ function get_all_resources() {
 	});
 }
 
-function refreshButton(value, row, index){
-	return [
-		'<button id="' + row.id + '" class="refresh">Refresh Instance</button>'
-	]
-}
-
-window.refreshAction = {
-	'click .refresh': function (e, value, row, index) {
-		// alert(index + "  " + row.id);
-		disable_button(row.id);
-		refresh_resource(row.id, index);
-	}
-};
-
-function disable_button(id) {
-	$('#' + id).attr("disabled", true);
-	$('#' + id).addClass('disabled');
-}
-
-function enable_button(id) {
-	$('#' + id).removeAttr('disabled');	
-	$('#' + id).removeClass('disabled');
-}
-
-function refresh_resource(instance_id, index){
+function refresh_instance(instance_id, index){
 	$.ajax({
 		url: '/instances/' + instance_id,
 		success: function(result){
@@ -54,4 +37,20 @@ function refresh_resource(instance_id, index){
 			enable_button(instance_id);
 		}
 	});
+}
+
+function refreshButton(value, row, index){
+	return [
+		'<button id="' + row.id + '" class="refresh">Refresh Instance</button>'
+	]
+}
+
+function disable_button(id) {
+	$('#' + id).attr("disabled", true);
+	$('#' + id).addClass('disabled');
+}
+
+function enable_button(id) {
+	$('#' + id).removeAttr('disabled');	
+	$('#' + id).removeClass('disabled');
 }

@@ -16,13 +16,17 @@
     <body>
       <div class="container">
         <div class="loader"></div>
+        <div>
+          <h1>Resource instances</h1>
+          <p>The following table includes data about all instances of a resource. It will contain the id, name and the status for each instance</p>
+        </div>
         <div style="display:none;" class="table-responsive">
+          <!-- We can easily extend the functionalities of the table eg using data-search="true" to do searching or do sorting -->
           <table 
             id="resources" 
             class="table table-hover table-striped" 
             data-pagination="true" 
-            data-page-size="10"
-            data-search="true">
+            data-page-size="10">
             <thead>
               <tr>
                 <th data-field="id">ID</th>
