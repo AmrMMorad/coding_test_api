@@ -1,24 +1,46 @@
 window.onload = function() {
 	// createInstanceAPIsForRange(1,10);
 	get_all_resources();
+	$('.loader').removeAttr("style").hide();
+  	$('.table-responsive').show();
 };
 
 function refreshButton(value, row, index){
 	return [
-		'<button class="refresh">Refresh Instance</button>'
+		'<button id="' + row.id + '" class="refresh">Refresh Instance</button>'
 	]
 }
 
 window.refreshAction = {
 	'click .refresh': function (e, value, row, index) {
+		disable_button(row.id);
 		refresh_resource(row.id, index);
 	}
 };
+
+function disable_button(id) {
+	$('#' + id).attr("disabled", true);
+	$('#' + id).addClass('disabled');
+}
+
+function enable_button(id) {
+	$('#' + id).removeAttr('disabled');	
+	$('#' + id).removeClass('disabled');
+}
+
+function delay(delay) {
+    var start = new Date().getTime();
+    while (new Date().getTime() < start + delay);
+}
 
 function refresh_resource(instance_id, index){
 	// var instance_data = $.ajax(
 	// 	{
 	// 		url: '/instances/' + instance_id,
+	// 		complete: function(){
+	// 			delay(1000);
+	// 			enable_button(instance_id);
+	// 		}
 	// 	});
 	var instance_data = {
 		"id": 1000,
@@ -36,6 +58,7 @@ function get_all_resources() {
 	// 	{
 	// 		url: '/instances',
 	// 	});
+	delay(500);
 	var resources_data = [
 	 		{
                "id": 1,
