@@ -23,8 +23,8 @@ For the environment, we used the following:
 
 ## Testing instructions
 Open the index.html file in a browser. We should see HTML page with a paragraph and a loading icon. This is shown as below:
-https://user-images.githubusercontent.com/9263535/35452583-b1ece056-02cf-11e8-9cda-44e3631da95a.png
+![alt text](https://github.com/AmrMMorad/coding_test_api/blob/master/screenshots/Screenshot%20from%202018-01-26%2019-09-37.png)
 After getting the result, a table with the instances will be shown as below:
-https://user-images.githubusercontent.com/9263535/35452582-b199053a-02cf-11e8-9e0b-5a1c6c649ca4.png
+![alt text](https://github.com/AmrMMorad/coding_test_api/blob/master/screenshots/Screenshot%20from%202018-01-26%2019-09-26.png)
 If refresh button is clicked, it is disabled as shown below:
-https://user-images.githubusercontent.com/9263535/35452584-b2d17f4a-02cf-11e8-8e07-af2bc44fe882.png
+![alt text](https://github.com/AmrMMorad/coding_test_api/blob/master/screenshots/Screenshot%20from%202018-01-26%2019-09-53.png)
