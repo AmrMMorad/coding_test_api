@@ -28,3 +28,6 @@ After getting the result, a table with the instances will be shown as below:
 ![alt text](https://github.com/AmrMMorad/coding_test_api/blob/master/screenshots/Screenshot%20from%202018-01-26%2019-09-26.png)
 If refresh button is clicked, it is disabled as shown below:
 ![alt text](https://github.com/AmrMMorad/coding_test_api/blob/master/screenshots/Screenshot%20from%202018-01-26%2019-09-53.png)
+
+## Validation and testing
+The code is validated (checked) using W3schools validator (https://validator.w3.org/) and (https://jigsaw.w3.org/css-validator/#validate_by_upload) and was tested against different browsers.
